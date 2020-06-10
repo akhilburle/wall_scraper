@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+            }
+
+            $(document).ready(() => {
+                rand = getRandomInt(1, 1000)
+                // alert("/download/" + rand)
+
+                $("a").attr("href", "/download/" + rand + "/{{ticker}}")
+                // alert("hahah")
+            })
+        </script>
+    </head>
+    <body>
+        Balance Sheet has been created </br>
+        <a href=#>Download</a>
+    </body>
+</html>
